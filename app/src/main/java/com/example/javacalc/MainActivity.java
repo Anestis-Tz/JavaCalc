@@ -191,4 +191,11 @@ public class MainActivity extends AppCompatActivity {
     public void zeroOnClick(View view) {
         setWorkings("0");
     }
+
+    public void clearSingleOnClick(View view) {
+        String str = workingsTV.getText().toString();
+        if(!str.equals(""))
+            str = str.substring(0, str.length() - 1);
+        workingsTV.setText(str);
+    }
 }
